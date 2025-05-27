@@ -47,7 +47,7 @@ sns.heatmap(
     conf_matrix,
     annot=True,            
     fmt='d',              
-    cmap="Pinks",         
+    cmap="RdPu",         
     xticklabels=["PCOS Não", "PCOS Sim"],  
     yticklabels=["PCOS Não", "PCOS Sim"]   
 )
@@ -74,7 +74,7 @@ feat_importances = feat_importances.sort_values(by='Importance', ascending=False
 plt.figure(figsize=(10, 6))
 
 #cria o gráfico
-sns.barplot(x='Importance', y='Feature', data=feat_importances, palette='viridis')
+sns.barplot(x='Importance', y='Feature', data=feat_importances, palette='magma')
 
 plt.title('Importância das Features')
 plt.xlabel('Importância')
